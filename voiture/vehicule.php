@@ -22,21 +22,23 @@
     }
 
 
-    public function setNom($name){
+    public function setName($name){
         $this->name = $name;
     }
-    public function setWidth($nbrRoue){
+    public function setnbrRoue($nbrRoue){
         $this->nbrRoue = $nbrRoue;
     }
-    public function setHeight($vitesse){
+    public function setVitesse($vitesse){
         $this->vitesse = $vitesse;
     }
 
     public function detect(){
         if ($this->nbrRoue ===2){
             return "Moto";
-        } else {
+        } else if($this->nbrRoue==4){
             return "Voiture";
+        } else {
+            return "ORNI";
         }
     }
     public function boost(){
